@@ -22,3 +22,5 @@ Below, you can find the files to use based on the task you are performing:
 2. For creating the Armenian emotion lexicon: EmoWordNet.txt
 3. For sentiment analysis: Sentiment_TestB.csv, Sentiment_TrainB.csv, stop-words.csv(, negative_words_hy.txt, positive_words_hy.txt)
 4. For emotion recognition: EmotionTest.csv, EmotionTrain.csv, stop-words.csv
+
+The GloVe models can be downloaded from [here](https://at.ispras.ru/owncloud/index.php/s/eXNpONfB09TBpgI).
