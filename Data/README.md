@@ -1,5 +1,5 @@
 # Data
-The following files are found in this folder. Note that anywhere, specific file is read in the notebooks that are not part of the outputs (our products),
+The following files are found in this folder. Note that anywhere where specific file is read in the notebooks that are not part of the outputs (our products),
 the files can be linked to this folder.
 
 Here are the descriptions of the files in the Data folder:
