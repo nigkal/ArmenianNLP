@@ -1,3 +1,4 @@
+# Data
 Here are the descriptions of the files in this folder:
 1. **emotionScores.pickle:** This contains the Armenian emotion lexicon.
 2. **EmotionTest.csv:** This contains the testing data used for emotion recognition. It has been translated to Armenian. The original data set is SemEval-2018 Task 1.
