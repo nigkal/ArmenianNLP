@@ -79,13 +79,13 @@ After creating these models, use the following functions to train SVM and LR res
 ``` python
 training = pd.DataFrame(train, index = y_train.index)
 
-def train_cv_embedding(clf):
+def train_cv_embedding(clf, training, y_train):
     kf = StratifiedKFold(10)
     for m, _ in kf.split(training[range(maximum * 300)], y_train):
         clf.fit(training[range(maximum * 300)].loc[training[range(maximum * 300)].index.intersection(m)], y_train.loc[y_train.index.intersection(m)])
     y = clf.predict(test[:, range(maximum * 300)])
     
-def train_cv_sentiment(clf): #for emotion, replace 303 with 305 in all
+def train_cv_sentiment(clf, training, y_train): #for emotion, replace 303 with 305 in all
     kf = StratifiedKFold(10)
     for m, _ in kf.split(training[range(maximum * 300, maximum * 303)], y_train): 
         clf.fit(training[range(maximum * 300, maximum * 303)].loc[training[range(maximum * 300, maximum * 303)].index.intersection(m)], y_train.loc[y_train.index.intersection(m)])
