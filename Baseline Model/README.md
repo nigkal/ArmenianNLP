@@ -4,7 +4,7 @@ The sentiment and emotion lexicons are evaluated using a baseline model. These m
 Use the following function to extract the sentiments from the sentiment lexicon and create the sentiment vector of each sentence in the data set.
 
 ```python
-def transform(x):
+def transform(x, scores):
     score = np.zeros((len(x), 3))
     for i in x.index:
         s = np.zeros((len(x[i]), 3))
@@ -28,7 +28,7 @@ def transform(x):
 Similar approach may be used to get the emotion scores of each sentence in the data set.
 
 ```python
-def transform(x):
+def transform(x, scores):
     score = np.zeros((len(x), 5))
     for i in x.index:
         s = np.zeros((len(x[i]), 5))
