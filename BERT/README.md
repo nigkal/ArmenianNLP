@@ -25,7 +25,7 @@ bert_base_config = {
 
 To pretrain BERT, run the content in ``Training ArmBERT.ipynb`` by linking it to a corpus and the BERT-base files, which you can get from [here](https://github.com/google-research/bert).
 
-To evaluate the BERT model, download the model from [here](https://mailaub-my.sharepoint.com/:f:/g/personal/nhk19_mail_aub_edu/Eurzo_S3iZtDgkfbAK_FvYQBMoVDhdBH7oSzR-0NRAsjjw?e=bDWgDm).
+To evaluate the BERT model, download the model from [here](https://mailaub-my.sharepoint.com/:f:/g/personal/nhk19_mail_aub_edu/Eurzo_S3iZtDgkfbAK_FvYQBMoVDhdBH7oSzR-0NRAsjjw?e=ytfZA8).
 
 Run the following code to load the BERT model for sentiment and emotion analyses.
 
