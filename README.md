@@ -4,7 +4,7 @@ This repository is for a project to bring NLP resources for the Armenian languag
 The folders in this repository are divided into the different models used for sentiment analysis and emotion recognition. The models are: baseline model, ensemble-learning model, BERT model, and Dict-BERT model. Each folder in this repository includes the following:
 - Jupyter notebooks where each evaluation is done with an the entire code.
 - Data folder that includes the files needed while evaluating the lexicons and the BERT models.
-- An explanation of how to do the evaluations on your own should you want to evaluate the lexicons and the models on your own.
+- An explanation of how to do the evaluations on your own, should you want to evaluate the lexicons and the models separately.
 
 Below, you will find the results we got doing sentiment analysis and emotion recognition on our lexicons and models.
 
