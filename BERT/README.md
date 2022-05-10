@@ -25,7 +25,7 @@ bert_base_config = {
 
 To pretrain BERT, run the content in ``Training ArmBERT.ipynb`` by linking it to a corpus and the BERT-base files, which you can get from [here](https://github.com/google-research/bert).
 
-To evaluate the BERT model, download the model from [here](https://mailaub-my.sharepoint.com/:f:/g/personal/nhk19_mail_aub_edu/Eurzo_S3iZtDgkfbAK_FvYQBMoVDhdBH7oSzR-0NRAsjjw?e=ytfZA8).
+To evaluate the BERT model, download the model from [here](https://mailaub-my.sharepoint.com/:f:/g/personal/nhk19_mail_aub_edu/Eurzo_S3iZtDgkfbAK_FvYQBMoVDhdBH7oSzR-0NRAsjjw?e=3DklQx).
 
 Run the following code to load the BERT model for sentiment and emotion analyses.
 
@@ -40,6 +40,21 @@ tokenizer = BertTokenizer.from_pretrained('./bert_model')
 #for emotion
 model = TFBertForSequenceClassification.from_pretrained('./bert_model', from_pt = True, num_labels = 5)
 tokenizer = BertTokenizer.from_pretrained('./bert_model')
+```
+
+For multiBERT, you can download the model from [here](https://storage.googleapis.com/bert_models/2018_11_23/multi_cased_L-12_H-768_A-12.zip). Alternatively, you could use the following code to load the multiBERT model for sentiment and emotion analyses.
+
+``` python
+import tensorflow as tf
+from transformers import BertTokenizer, TFBertForSequenceClassification
+
+#for sentiment
+model = TFBertForSequenceClassification.from_pretrained('bert-base-multilingual-cased', from_pt = True)
+tokenizer = BertTokenizer.from_pretrained('bert-base-multilingual-cased')
+
+#for emotion
+model = TFBertForSequenceClassification.from_pretrained('bert-base-multilingual-cased', from_pt = True, num_labels = 5)
+tokenizer = BertTokenizer.from_pretrained('bert-base-multilingual-cased')
 ```
 
 To transform your data into BERT-readable format, run the following functions.
@@ -127,6 +142,8 @@ model.compile(optimizer = tf.keras.optimizers.Adam(learning_rate = 3e-5),
 
 model.fit(train_data, epochs = 1, validation_data = validation_data, verbose = 2)
 ```
+
+You can also download the fine-tuned models from [here](https://mailaub-my.sharepoint.com/:f:/g/personal/nhk19_mail_aub_edu/EhaelJLnRxFEjy3ImAW703MBli9NoGArgVYhhKHFo7-qIA?e=n6emcH). These models are named using "BERT_name_task".
 
 Finally, use the following code for prediction and evaluation.
 
